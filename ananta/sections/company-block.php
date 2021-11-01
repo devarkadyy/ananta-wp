@@ -5,7 +5,7 @@ $image2 = get_sub_field('company-block_img_2');
 <div class="company-block__inner">
     <div class="company-block__inner--items">
         <div class="company-block__inner--item">
-            <img src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>" class="company-block__inner--img">
+            <img src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>" class="company-block__inner--image">
         </div>
         <div class="company-block__inner--item">
             <div class="company-block__inner--desc">
@@ -19,7 +19,7 @@ $image2 = get_sub_field('company-block_img_2');
         </div>
     </div>
     <div class="company-block__inner--items">
-        <div class="company-block__inner--item">
+        <div class="company-block__inner--photo">
             <img src="<?php echo $image2['url']?>" alt="<?php echo $image['alt']?>" class="company-block__inner--img">
         </div>
     </div>

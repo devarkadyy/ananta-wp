@@ -1,0 +1,57 @@
+.company-block{
+  padding: 40px 0 80px;
+  position: relative;
+  &__inner{
+    display: flex;
+    flex-direction: column-reverse;
+    &--photo{
+      width: 178px;
+      height: 257px;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+    }
+    &--img:nth-child(1){
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      right: -20px;
+
+    }
+    &--items:nth-child(2){
+      display: flex;
+      justify-content: flex-end;
+    }
+    &--items:nth-child(1){
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &--item:nth-child(2){
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 56%;
+        top: 17%;
+        background: rgba(141, 184, 200, 0.3);
+      }
+    }
+    &--item:nth-child(1){
+      width: 320px;
+      height: 290px;
+      position: relative;
+      z-index: 9;
+    }
+    &--image{
+      position: absolute;
+      left: -10%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+}

@@ -1,0 +1,77 @@
+$maxWidth: 1200px;
+@mixin media($w) {
+  @if $w == lg {
+    @media (max-width: 992px) {@content;}
+  }
+  @else if $w == md {
+    @media (max-width: 768px) {@content;}
+  }
+  @else if $w == sm {
+    @media (max-width: 576px) {@content;}
+  }
+  @else if $w == xs {
+    @media (max-width: 320px) {@content;}
+  }
+
+}
+
+@mixin min-media($w) {
+  @if $w == lg {
+    @media (min-width: 992px) {@content;}
+  }
+  @else if $w == md {
+    @media (min-width: 768px) {@content;}
+  }
+  @else if $w == sm {
+    @media (min-width: 576px) {@content;}
+  }
+  @else if $w == xs {
+    @media (min-width: 335px) {@content;}
+  }
+
+}
+
+$maxWidth: 1400;
+@mixin a-fonts($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("/src/fonts/#{$file_name}.ttf") format("truetype");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+@mixin bacground( $path, $position: 100%, $repeat: no-repeat )
+{
+  background: {
+    image: url($path);
+    position: $position;
+    repeat: $repeat;
+  }
+  height: 100vh;
+
+}
+@mixin img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+@mixin transition($x){
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+  transition: all $x ease-in linear;
+}

@@ -1,0 +1,218 @@
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  flex-direction: row-reverse;
+  @include min-media(lg){
+    box-shadow: none;
+    flex-direction: row;
+    padding-top: 37px;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+  &__logo{
+    width: 58px;
+    height: 40px;
+    @include min-media(lg){
+      width: 114px;
+      height: 78px;
+      position: relative;
+    }
+  }
+.custom-logo{
+  @include min-media(lg){
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+}
+.header-inner{
+  padding-bottom: 70px;
+  padding-top: 70px;
+  @include min-media(lg){
+    display: flex;
+    padding: 0;
+    align-items: center;
+  }
+  &__wrap{
+    @include min-media(lg){
+      justify-content: flex-start;
+      margin-left: calc(100% - 940px);
+    }
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    text-align: center;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in;
+    transform: translateY(-5%);
+    z-index: 9999;
+    @include min-media(lg){
+      opacity: 1;
+      visibility: visible;
+      flex-direction: row;
+      background: transparent;
+      position: relative;
+      top: 0;
+    }
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      transition: all .3s ease-in;
+      transform: translateY(0);
+    }
+  }
+
+  &__item:not(:last-child){
+    margin-bottom: 20px;
+    @include min-media(lg){
+      margin: 0;
+      padding-right: 28px;
+    }
+  }
+  &__item--parent{
+    height: 20px;
+    transition: all .4s ease-in;
+    &.active{
+     height: 100%;
+      transition: all .4s ease-in;
+    }
+   .header-inner__link{
+     position: relative;
+     &:before{
+       content: '';
+       position: absolute;
+       right: -80px;
+       width: 7px;
+       height: 7px;
+       border-top: 1px solid $mainColor;
+       border-right: 1px solid $mainColor;
+       margin-right: 60px;
+       transform: rotate(135deg);
+       top: 30%;
+       transition: all .3s ease-in;
+       @include min-media(lg){
+         right: -74px;
+         top: 15%;
+       }
+     }
+     &.active:before{
+       transform: rotate(-45deg);
+       transition: all .3s ease-in;
+     }
+   }
+  }
+  &__sub-menu--1{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in;
+    transform: translateY(-10%);
+    @include min-media(lg){
+      display: none;
+    }
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      transition: all .3s ease-in;
+      transform: translateY(0%);
+    }
+  }
+
+  &__item--active{
+    .header-inner__link{
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: $mainColor;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+      }
+
+    }
+  }
+  &__sub-menu--1{
+    margin-top: 12px;
+  }
+  &__link{
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    @include min-media(lg){
+      font-size: 12px;
+    }
+  }
+  &__sub-menu__link{
+    font-size: 11px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  &__link:active{
+
+  }
+  &__lang{
+    display: flex;
+    margin-bottom: 30px;
+    @include min-media(lg)
+    {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    &--item{
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      position: relative;
+      &:not(:last-child):before{
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 100%;
+          background: $mainColor;
+          left: 30px;
+        @include min-media(lg){
+          display: none;
+        }
+      }
+    }
+    &--item:not(:last-child){
+      margin-right: 20px;
+      @include min-media(lg){
+        margin-right: 0;
+      }
+    }
+  }
+  &__search{
+    display: none;
+    @include min-media(lg){
+      display: block;
+    }
+  }
+}

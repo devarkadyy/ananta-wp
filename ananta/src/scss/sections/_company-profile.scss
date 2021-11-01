@@ -1,0 +1,49 @@
+.company-profile{
+  &__inner{
+    @include min-media(lg){
+      display: flex;
+    }
+
+  }
+  margin: 25px 0 45px;
+  &__title{
+    margin-bottom: 10px;
+  }
+  &__desc{
+    @include min-media(lg){
+      max-width: 500px;
+      margin-right: 100px;
+    }
+  }
+  &__text{
+    margin-bottom: 40px;
+  }
+  &__photo{
+    height: 285px;
+    width: 334px;
+    @include min-media(lg){
+      height: 700px;
+    }
+    &--inner{
+      @include min-media(lg){
+        position: absolute;
+        width: 640px;
+        height: 700px;
+        right: 0;
+      }
+
+    }
+  }
+  &__img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    @include min-media(lg){
+      position: relative;
+      object-fit: none;
+    }
+  }
+}

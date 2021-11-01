@@ -1,0 +1,40 @@
+.title{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  @include min-media(lg){
+    font-size: 30px;
+  }
+}
+.title-h1{
+  text-transform: none;
+  font-weight: 300;
+  @include min-media(lg){
+    font-size: 48px;
+    line-height: 57px;
+  }
+}
+.sub-title{
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.breadcrumb{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  color: $opacityColor;
+  margin-top: 35px;
+  &_last{
+    font-weight: 400;
+  }
+}
+p{
+  color: $opacityColor;
+  font-weight: 300;
+}
+p:not(:last-child){
+  margin-bottom: 25px;
+}

@@ -1,0 +1,75 @@
+.cooperation-home{
+  margin-top: 100px;
+  position: relative;
+  @include min-media(lg){
+    margin-top: 137px;
+
+  }
+  &__inner{
+    @include min-media(lg){
+      display: flex;
+      flex-flow: row-reverse;
+      position: relative;
+    }
+    &--absolute{
+      height: 292px;
+      @include min-media(lg){
+        height: 675px;
+        width: 100%;
+      }
+    }
+    &--title{
+      margin-bottom: 10px;
+      @include min-media(lg){
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+    &--text{
+      margin-bottom: 10px;
+    }
+    &--desc{
+      margin-bottom: 25px;
+      padding-top: 85px;
+      @include min-media(lg){
+      flex: 0 0 50%;
+        height: 100%;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: rgba(141, 184, 200, 0.3);
+        width: 100%;
+        height: 65%;
+        top: 0;
+        bottom: 0;
+        @include min-media(lg){
+          right: 0;
+          width: calc(100% - 202px);
+          left: unset;
+        }
+      }
+      &-wrap{
+        max-width: 375px;
+      }
+    }
+    &--photo{
+      position: absolute;
+      right: 0;
+      width: 325px;
+      height: 290px;
+      @include min-media(lg){
+        position: absolute;
+        width: 640px;
+        height: 580px;
+        left: -157px;
+        top: 95px;
+      }
+    }
+    &--img{
+      @include img;
+    }
+  }
+}

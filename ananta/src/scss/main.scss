@@ -1,0 +1,26 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "reset";
+@import "title";
+@import "text";
+@import "link";
+@import "partials/header";
+@import "sections/home";
+@import "sections/cooperation-home";
+@import "sections/production-home";
+@import "sections/company-profile";
+@import "sections/text-block";
+@import "sections/company-block";
+@import "sections/about-home";
+@import "partials/burger";
+@import "partials/footer";
+.container{
+  margin: 0 auto;
+  padding: 0 20px;
+  @include min-media(lg){
+    max-width: 1160px;
+  }
+
+}
+

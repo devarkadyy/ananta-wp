@@ -1,49 +1,40 @@
-.company-profile{
-  &__inner{
-    @include min-media(lg){
+.company-profile {
+  margin: 20px 0 97px;
+  &__inner {
+    @include min-media(lg) {
       display: flex;
     }
-
-  }
-  margin: 25px 0 45px;
-  &__title{
-    margin-bottom: 10px;
   }
   &__desc{
+    margin-bottom: 40px;
     @include min-media(lg){
-      max-width: 500px;
-      margin-right: 100px;
+      width: 50%;
+      padding: 0 100px 0 0;
     }
   }
-  &__text{
-    margin-bottom: 40px;
+  &__wrap{
+    @include min-media(lg){
+      flex: 0 0 100%;
+    }
   }
   &__photo{
-    height: 285px;
-    width: 334px;
     @include min-media(lg){
-      height: 700px;
-    }
-    &--inner{
-      @include min-media(lg){
-        position: absolute;
-        width: 640px;
-        height: 700px;
-        right: 0;
-      }
-
+      flex: 0 0 50%;
+      transform: translate(-100%);
+      position: relative;
+      width: 700px;
+      height: 640px;
     }
   }
   &__img{
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
     @include min-media(lg){
-      position: relative;
-      object-fit: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
     }
   }
+
 }

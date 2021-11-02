@@ -6,7 +6,6 @@
     ?>
 </div>
 <section class="company-profile">
-    <div class="container">
         <?php
         if (have_rows('company-profile')):
             while (have_rows('company-profile')) : the_row();
@@ -17,7 +16,6 @@
             endwhile;
         endif;
         ?>
-    </div>
 </section>
 <section class="text-block">
     <div class="container">
@@ -34,13 +32,95 @@
     </div>
 </section>
 <section class="company-block">
-    <div class="container">
         <?php
         if (have_rows('company-block')):
             while (have_rows('company-block')) : the_row();
                 if (get_row_layout() == 'company-block-info'):
                     ?>
                     <?php get_template_part('sections/company', 'block'); ?>
+                <?php endif;
+            endwhile;
+        endif;
+        ?>
+</section>
+<section class="text-block">
+    <div class="container">
+        <?php
+        if (have_rows('profile_content')):
+            while (have_rows('profile_content')) : the_row();
+                if (get_row_layout() == 'profile_content-info'):
+                    ?>
+                    <?php get_template_part('sections/text', 'block'); ?>
+                <?php endif;
+            endwhile;
+        endif;
+        ?>
+    </div>
+</section>
+<section class="two-photo">
+    <div class="container">
+        <?php
+        if (have_rows('profile_content')):
+            while (have_rows('profile_content')) : the_row();
+                if (get_row_layout() == 'two_photo'):
+                    ?>
+                    <?php get_template_part('sections/company', 'two-photo'); ?>
+                <?php endif;
+            endwhile;
+        endif;
+        ?>
+    </div>
+</section>
+<section class="medicines">
+    <div class="container">
+        <?php
+        if (have_rows('profile_content')):
+            while (have_rows('profile_content')) : the_row();
+                if (get_row_layout() == 'medicines-info'):
+                    ?>
+                    <?php get_template_part('sections/company', 'medicines'); ?>
+                <?php endif;
+            endwhile;
+        endif;
+        ?>
+    </div>
+</section>
+<section class="text-block">
+    <div class="container">
+        <?php
+        if (have_rows('profile_content')):
+            while (have_rows('profile_content')) : the_row();
+                if (get_row_layout() == 'text_block'):
+                    ?>
+                    <?php get_template_part('sections/text', 'block'); ?>
+                <?php endif;
+            endwhile;
+        endif;
+        ?>
+    </div>
+</section>
+<section class="two-photo">
+    <div class="container">
+        <?php
+        if (have_rows('profile_content')):
+            while (have_rows('profile_content')) : the_row();
+                if (get_row_layout() == 'two_photo_2'):
+                    ?>
+                    <?php get_template_part('sections/company', 'two-photo'); ?>
+                <?php endif;
+            endwhile;
+        endif;
+        ?>
+    </div>
+</section>
+<section class="briefcase">
+    <div class="container">
+        <?php
+        if (have_rows('profile_content')):
+            while (have_rows('profile_content')) : the_row();
+                if (get_row_layout() == 'briefcase-block'):
+                    ?>
+                    <?php get_template_part('sections/company', 'briefcase'); ?>
                 <?php endif;
             endwhile;
         endif;

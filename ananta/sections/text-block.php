@@ -5,5 +5,4 @@
     <div class="text-block__text">
             <?php echo get_sub_field('text-block_text') ?>
     </div>
-
 </div>

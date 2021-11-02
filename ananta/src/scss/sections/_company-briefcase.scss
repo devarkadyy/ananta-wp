@@ -1,0 +1,17 @@
+.briefcase{
+  &__inner{
+    @include min-media(lg){
+      display: flex;
+    }
+  }
+  &__item{
+    @include min-media(lg){
+      flex: 0 0 50%;
+    }
+  }
+  &__item:nth-child(1){
+    @include min-media(lg){
+      padding-right: 140px;
+    }
+  }
+}

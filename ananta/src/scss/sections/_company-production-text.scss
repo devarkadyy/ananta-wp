@@ -1,0 +1,23 @@
+.production-text{
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    @include min-media(lg){
+      flex-direction: row;
+    }
+  }
+  &__item{
+    margin-bottom: 90px;
+    @include min-media(lg){
+      flex: 0 0 50%;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__item:nth-child(1){
+    @include min-media(lg){
+      padding-right: 40px;
+    }
+  }
+}

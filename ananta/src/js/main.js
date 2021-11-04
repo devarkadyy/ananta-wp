@@ -17,6 +17,12 @@ jsArrow.onclick = function (e){
 
 jQuery(document).ready(function($) {
 
+    $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        autoplay: false
+    });
 })
 
 

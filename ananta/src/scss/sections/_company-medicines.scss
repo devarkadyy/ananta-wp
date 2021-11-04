@@ -1,4 +1,5 @@
 .medicines{
+  margin-bottom: 85px;
   @include min-media(lg){
     margin-bottom: 200px;
   }
@@ -24,6 +25,7 @@
     }
   }
   &__photo:nth-child(2){
+    min-height: 282px;
     @include min-media(lg){
       bottom: -21%;
       position: absolute;
@@ -49,6 +51,12 @@
       top: 0;
       left: 0;
       object-fit: cover;
+    }
+  }
+  &__desc{
+    margin-bottom: 25px;
+    @include min-media(lg){
+      margin-bottom: 0;
     }
   }
 }

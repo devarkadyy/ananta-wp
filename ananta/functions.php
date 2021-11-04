@@ -144,12 +144,13 @@ add_action( 'widgets_init', 'ananta_widgets_init' );
 function studio_scripts() {
     wp_enqueue_style( 'studio-style', get_stylesheet_uri(), array(), _S_VERSION );
     wp_style_add_data( 'studio-style', 'rtl', 'replace' );
+    wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/css/slick.css');
     wp_enqueue_style( 'main-css', get_template_directory_uri() . '/assets/css/main.css');
-//    wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/css/slick.css');
+
 
     wp_enqueue_script('jquery');
     wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true );
-//    wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.min.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.min.js', array(), _S_VERSION, true );
 
     wp_enqueue_script( 'studio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 

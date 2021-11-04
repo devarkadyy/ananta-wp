@@ -21,9 +21,9 @@ $image2 = get_sub_field('medicines-info_img_2');
                 <h2 class="medicines__title title-h2">
                     <?php echo get_sub_field('medicines-info_title')?>
                 </h2>
-                <p class="medicines__text">
+                <div class="medicines__text">
                     <?php echo get_sub_field('medicines-info_text')?>
-                </p>
+                </div>
             </div>
         </div>
     </div>

@@ -2,3 +2,8 @@
   font-weight: 300;
   color: $opacityColor;
 }
+.text-custom{
+  @include min-media(lg){
+    max-width: 522px;
+  }
+}

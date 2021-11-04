@@ -7,9 +7,9 @@ $image = get_sub_field('briefcase-block_img');
             <h2 class="briefcase__title title-h2">
                 <?php echo get_sub_field('briefcase-block_title')?>
             </h2>
-            <p class="briefcase-block_text text">
+            <div class="briefcase-block_text text">
                 <?php echo get_sub_field('briefcase-block_text')?>
-            </p>
+            </div>
         </div>
     </div>
     <div class="briefcase__item">

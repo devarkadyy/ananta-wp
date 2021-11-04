@@ -37,6 +37,12 @@ jsArrow.onclick = function (e){
 
 jQuery(document).ready(function($) {
 
+    $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        autoplay: false
+    });
 })
 
 
@@ -110,6 +116,7 @@ var __webpack_exports__ = {};
 /* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_main__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _js_admin_js_customizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(411);
 /* harmony import */ var _js_admin_js_customizer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_admin_js_customizer__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 

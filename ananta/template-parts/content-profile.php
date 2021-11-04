@@ -127,3 +127,31 @@
         ?>
     </div>
 </section>
+<section class="text-block">
+    <div class="container">
+        <?php
+        if (have_rows('profile_content')):
+            while (have_rows('profile_content')) : the_row();
+                if (get_row_layout() == 'two_text_info'):
+                    ?>
+                    <?php get_template_part('sections/text', 'block'); ?>
+                <?php endif;
+            endwhile;
+        endif;
+        ?>
+    </div>
+</section>
+<section class="team">
+    <div class="container">
+        <?php
+        if (have_rows('profile_content')):
+            while (have_rows('profile_content')) : the_row();
+                if (get_row_layout() == 'team'):
+                    ?>
+                    <?php get_template_part('sections/company', 'team'); ?>
+                <?php endif;
+            endwhile;
+        endif;
+        ?>
+    </div>
+</section>

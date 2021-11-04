@@ -4,6 +4,12 @@
       display: flex;
     }
   }
+  &__inner:not(:last-child){
+    margin-bottom: 85px;
+    @include min-media(lg){
+      margin-bottom: 100px;
+    }
+  }
   &__title{
     margin-bottom: 10px;
     @include min-media(lg){

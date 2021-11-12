@@ -14,6 +14,14 @@ jsArrow.onclick = function (e){
     jsMenu.classList.toggle('active')
 
 }
+document.querySelectorAll('.contact__tabs--item').forEach((item)=>
+        item.addEventListener('click', function (e){
+            e.preventDefault()
+            document.querySelectorAll('.contact__tabs--item').forEach((child)=> child.classList.remove('contact__tabs--item-active'))
+
+            item.classList.add('.contact__tabs--item-active')
+        })
+)
 
 jQuery(document).ready(function($) {
 

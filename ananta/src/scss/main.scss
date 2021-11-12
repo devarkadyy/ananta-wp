@@ -7,6 +7,7 @@
 @import "link";
 @import "partials/header";
 @import "sections/home";
+@import "sections/home-slider";
 @import "sections/cooperation-home";
 @import "sections/production-home";
 @import "sections/company-profile";
@@ -16,17 +17,35 @@
 @import "sections/company-medicines";
 @import "sections/company-briefcase";
 @import "sections/company-team";
+@import "sections/content-single";
 @import "sections/company-production-text";
+@import "sections/category-news";
 @import "sections/custom-slider";
+@import "sections/product-category";
+@import "sections/product-category-sidebar";
+@import "sections/related-content";
+@import "sections/text-block-bg";
+@import "sections/product";
+@import "sections/single-product";
 @import "sections/about-home";
+@import "sections/contact-form";
+@import "sections/contact";
 @import "partials/burger";
+@import "sections/text-block-career";
 @import "partials/footer";
+
 .container{
   margin: 0 auto;
   padding: 0 20px;
   @include min-media(lg){
     max-width: 1160px;
   }
-
+}
+.custom-container{
+  margin: 0 auto;
+  padding: 0 20px;
+  @include min-media(lg){
+    max-width: 1300px;
+  }
 }
 

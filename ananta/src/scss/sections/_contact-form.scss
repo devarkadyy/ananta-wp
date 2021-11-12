@@ -1,0 +1,49 @@
+.wpcf7 input[type="text"]{
+  border: 2px solid #F6F7F8;
+  padding: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  width: 100%;
+}
+.wpcf7 input[type="email"]{
+  border: 2px solid #F6F7F8;
+  padding: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  width: 100%;
+}
+.wpcf7 input[type="tel"]{
+  border: 2px solid #F6F7F8;
+  padding: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  width: 100%;
+}
+textarea{
+  height: 120px;
+  background: #FFFFFF;
+  border: 2px solid #F6F7F8;
+  outline: none;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.wpcf7-form-control:before {
+  content: "Click me";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: red;
+  font-size: 16px;
+}
+.wpcf7 input[type="file"]{
+  font-size: 0;
+}
+.wpcf7 input[type="submit"]{
+  background-color: #FE701C;
+  padding: 15px 45px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+

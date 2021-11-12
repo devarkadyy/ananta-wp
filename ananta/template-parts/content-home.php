@@ -1,3 +1,15 @@
+<section class="home-slider">
+    <?php
+    if (have_rows('shome-slider')):
+        while (have_rows('shome-slider')) : the_row();?>
+                <div class="container">
+                    <?php get_template_part('sections/home', 'slider'); ?>
+                </div>
+            <?php
+        endwhile;
+    endif;
+    ?>
+</section>
 <section class="home-grid">
     <div class="container">
         <h2 class="home-grid__title">
@@ -47,16 +59,16 @@
     </div>
 </section>
 <section class="cooperation-home">
-        <div class="container">
-            <?php
-            if (have_rows('cooperation-home')):
-                while (have_rows('cooperation-home')) : the_row();
-                    if (get_row_layout() == 'cooperation-info'):
-                        ?>
-                        <?php get_template_part('sections/home', 'cooperation'); ?>
-                    <?php endif;
-                endwhile;
-            endif;
-            ?>
-        </div>
+    <div class="container">
+        <?php
+        if (have_rows('cooperation-home')):
+            while (have_rows('cooperation-home')) : the_row();
+                if (get_row_layout() == 'cooperation-info'):
+                    ?>
+                    <?php get_template_part('sections/home', 'cooperation'); ?>
+                <?php endif;
+            endwhile;
+        endif;
+        ?>
+    </div>
 </section>

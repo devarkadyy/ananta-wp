@@ -1,0 +1,92 @@
+.product-category{
+  @include min-media(lg){
+    padding: 40px 0 130px;
+  }
+  &__wrap{
+    display: grid;
+    grid-template-columns: 25% 70%;
+    grid-gap: 40px;
+    &--inner:nth-child(1){
+
+      background-color: #F2F2F2;
+    }
+    &--inner:nth-child(2){
+
+    }
+    &--top{
+      display: flex;
+      justify-content: space-between;
+      background-color: #F2F2F2;
+      height: 56px;
+      align-items: center;
+      padding: 0 15px;
+    }
+    &--item{
+      display: flex;
+      align-items: center;
+    }
+    &--sort{
+      display: flex;
+    }
+    &--sort:not(:last-child){
+      margin-right: 25px;
+    }
+    &--name{
+      margin-right: 20px;
+    }
+    &__products{
+      display: grid;
+      grid-template-columns: repeat(3 ,1fr);
+      grid-gap: 25px;
+      margin-top: 25px;
+    }
+    &--vue:nth-child(2){
+      position: relative;
+      height: 2px;
+      width: 19px;
+      background-color: $mainColor;
+      top: -5px;
+      cursor: pointer;
+      &:before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 19px;
+        background-color: $mainColor;
+        top: 10px;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        width: 19px;
+        height: 2px;
+        background-color: $mainColor;
+        top: 5px;
+      }
+    }
+  }
+
+}
+.product-item{
+  border: 2px solid #F6F7F8;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  &__img{
+    background-color: #F6F6F6;
+  }
+  &__desc{
+    margin: 25px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title{
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &__exec{
+    font-weight: 300;
+    text-align: center;
+  }
+}

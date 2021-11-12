@@ -1,0 +1,15 @@
+.single{
+  &__content{
+    margin-top: 30px;
+   @include min-media(lg){
+     margin-top: 50px;
+   }
+    &--img{
+      margin-bottom: 30px;
+     @include min-media(lg)
+     {
+       margin-bottom: 50px;
+     }
+    }
+  }
+}

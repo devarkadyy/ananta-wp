@@ -19,6 +19,9 @@ get_header();
             <h1 class="title-h1">
                 <?php echo single_cat_title(); ?>
             </h1>
+            <div class="articles">
+
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -37,7 +40,7 @@ get_header();
 
 		endif;
 		?>
-
+            </div>
 	</main>
 
 <?php

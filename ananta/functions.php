@@ -314,3 +314,89 @@ function bem_menu($location = "main_menu", $css_class_prefix = 'main-menu', $css
     }
 }
 
+//add_filter ('the_content', 'add_responsive_class');
+//
+//function add_responsive_class($content){
+//    if(is_single()){
+//
+//        $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+//        $document = new DOMDocument();
+//        libxml_use_internal_errors(true);
+//        $document->loadHTML(utf8_decode($content));
+//
+//        $imgs = $document->getElementsByTagName('img');
+//        foreach ($imgs as $img) {
+//            $img->setAttribute('class','single__content--img');
+//        }
+//
+//        $html = $document->saveHTML();
+//        return $html;
+//    }
+//
+//}
+
+
+
+add_action('init', 'register_post_types');
+function register_post_types(){
+    register_taxonomy('objectcat', array('object'), array(
+        'label'                 => 'Рубрики объектов',
+        'labels'                => array(
+            'name'              => 'Рубрики объектов',
+            'singular_name'     => 'Рубрики объектов',
+            'search_items'      => 'Искать рубрики',
+            'all_items'         => 'Все рубрики',
+            'parent_item'       => 'Родит. рубрика',
+            'parent_item_colon' => 'Родит. рубрика:',
+            'edit_item'         => 'Редактировать рубрику',
+            'update_item'       => 'Обновить рубрику',
+            'add_new_item'      => 'Добавить рубрику',
+            'new_item_name'     => 'Заголовок',
+            'menu_name'         => 'Рубрики объектов',
+        ),
+        'description'           => 'Рубрики для объектов',
+        'public'                => true,
+        'show_in_nav_menus'     => true,
+        'show_ui'               => true,
+        'show_tagcloud'         => false,
+        'hierarchical'          => true,
+        'rewrite'               => array( 'hierarchical' => true ),
+        'show_admin_column'     => true,
+    ) );
+// Объекты
+    register_post_type('object', array(
+        'label'  => 'Объект',
+        'labels' => array(
+            'name'               => 'Объекты',
+            'singular_name'      => 'Объект',
+            'add_new'            => 'Добавить новый',
+            'add_new_item'       => 'Введите заголовок',
+            'edit_item'          => 'Редактирование объекта',
+            'new_item'           => 'Новый объект',
+            'view_item'          => 'Посмотреть объект',
+            'search_items'       => 'Искать объект',
+            'not_found'          => 'Объектов не найдено',
+            'not_found_in_trash' => 'В корзине объектов не найдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Объекты',
+        ),
+        'description'         => 'Объекты',
+        'public'              => true,
+        'publicly_queryable'  => true,
+        'exclude_from_search' => false,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 23,
+        'menu_icon'           => 'dashicons-plus-alt',
+        'capability_type'   => 'post',
+        'map_meta_cap'      => true,
+        'hierarchical'        => false,
+        'supports'            => array('title', 'editor', 'comments', 'author', 'thumbnail'),
+        'taxonomies'          => array('objectcat', 'localcat'),
+        'has_archive'         => true,
+        'rewrite'             => array('slug' => 'objects', 'with_front' => false),
+        'query_var'           => true,
+    ) );
+}
+
